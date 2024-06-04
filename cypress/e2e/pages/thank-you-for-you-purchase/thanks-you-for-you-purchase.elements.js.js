@@ -2,7 +2,7 @@ import { ThanksYouForYouPurchaseElements } from "./thank-you-for-you-purchase.me
 
 export class ThanksYouForYouPurchaseMethods{
     static clicOnOkButton(){
-        ThanksYouForYouPurchaseElements.buttons.ok.Click()
+        ThanksYouForYouPurchaseElements.buttons.ok.click()
     }
     static verifyGreenCheckMarkIsDisplayed(){
         ThanksYouForYouPurchaseElements.icons.greenCheckMark.should("exist")

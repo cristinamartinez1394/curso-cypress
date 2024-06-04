@@ -11,6 +11,6 @@ export class ProdcutsDetailsMethods{
     }
 
     static verifyProductAddedMessage(){
-        CommonPageMethods.verifyAlert('Product Added')
+        CommonPageMethods.verifyAlert('Product added.')
     }
 }

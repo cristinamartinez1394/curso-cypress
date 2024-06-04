@@ -3,6 +3,7 @@ export class ThanksYouForYouPurchaseElements{
         return{
             get ok(){
                 return cy.contains('button', 'OK')
+                
             }
         }
        }

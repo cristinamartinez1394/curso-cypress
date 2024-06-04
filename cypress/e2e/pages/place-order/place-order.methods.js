@@ -1,3 +1,4 @@
+import { PlaceOrderData } from "./place-order.data";
 import { placeOrderElements } from "./place-order.elements";
 
 export class PlaceOrderMethods{
@@ -6,19 +7,19 @@ export class PlaceOrderMethods{
     }
 
     static insertCountry(country){
-        placeOrderElements.textboxes.name.invoke('val',country)
+        placeOrderElements.textboxes.country.invoke('val',country)
     }
 
     static insertCity(city){
-        placeOrderElements.textboxes.name.invoke('val',city)
+        placeOrderElements.textboxes.city.invoke('val',city)
     }
 
     static insertCreditCard(creditCardNumber){
-        placeOrderElements.textboxes.name.invoke('val',creditCardNumber)
+        placeOrderElements.textboxes.creditCard.invoke('val',creditCardNumber)
     }
 
     static insertMonth(month){
-        placeOrderElements.textboxes.name.invoke('val',month)
+        placeOrderElements.textboxes.month.invoke('val',month)
     }
 
     static clickOnCloseButton(){
@@ -30,6 +31,15 @@ export class PlaceOrderMethods{
     }
 
     static insertYear(year){
-        placeOrderElements.textboxes.name.invoke('val',year)
+        placeOrderElements.textboxes.year.invoke('val',year)
+    }
+
+    static insertOrderInformation(data){
+        this.insertName(data.name)
+        this.insertCountry(data.country)
+        this.insertCity(data.city)
+        this.insertCreditCard(data.creditCardNumber)
+        this.insertMonth(data.month)
+        this.insertYear(data.year)
     }
 }
