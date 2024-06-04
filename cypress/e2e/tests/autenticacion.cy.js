@@ -24,7 +24,11 @@ describe(CommonPageData.testSuites.autenticacion, ()=>{
         LoginMethods.clickOnloginButton();
         Logger.verification('Verificar que se redirige al usuario a la página de inicio')
         CommonPageMethods.verifySignedUser(LoginData.validCredentials.username)
-    })
+
+        Logger.postCondition('Log out')
+        CommonPageMethods.logOut();
+        cy.wait(5000)
+    });
 
     it('Inicio de sesion inválido', ()=>{
         Logger.stepNumber(1)
