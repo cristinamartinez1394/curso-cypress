@@ -144,6 +144,9 @@ describe(CommonPageData.testSuites.catalogoYCompras, ()=>{
         ThanksYouForYouPurchaseMethods.clicOnOkButton();
         HomeMethods.verifyHomePageIsShown();
 
+        Logger.postCondition('Log out')
+        CommonPageMethods.logOut();
+
     })
     
 })
