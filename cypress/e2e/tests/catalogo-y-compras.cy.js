@@ -39,7 +39,7 @@ describe(CommonPageData.testSuites.catalogoYCompras, ()=>{
 
         Logger.postCondition('Log out')
         CommonPageMethods.logOut();
-        cy.wait(5000)
+
     })
 
     it('Agregar producto al carrito',()=>{
@@ -79,7 +79,7 @@ describe(CommonPageData.testSuites.catalogoYCompras, ()=>{
 
         Logger.postCondition('Limpiar carrito y cerrar sesión')
         CartMethods.emptyCart(user,password)
-        cy.wait(5000)
+
     })
 
     xit('Realizar una compra',()=>{
