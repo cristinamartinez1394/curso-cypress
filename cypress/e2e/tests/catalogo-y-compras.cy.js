@@ -140,7 +140,6 @@ describe(CommonPageData.testSuites.catalogoYCompras, ()=>{
         Logger.stepNumber(12)
         Logger.verification('Verificar que se muestra un mensaje de confirmacion y se redirige al usuario a la pagina de inicio ')
         ThanksYouForYouPurchaseMethods.verifyGreenCheckMarkIsDisplayed();
-        cy.wait(3000)
         ThanksYouForYouPurchaseMethods.clicOnOkButton();
         HomeMethods.verifyHomePageIsShown();
 
