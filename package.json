@@ -4,18 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "generar-reporte":"allure generate allure-results -o allure-report --clean",
-    "abrir-reporte":"allure open",
-    "ejecutar-pruebas":"cypress run --headed --env allure=true",
-    "limpiar-reporte":"rimraf ./allure-report && rimraf ./allure-results",
-    "test":"npm run limpiar-reporte && npm run ejecutar-pruebas & npm run generar-reporte && npm run abrir-reporte"
-
+    "generar-reporte": "allure generate allure-results -o allure-report --clean",
+    "abrir-reporte": "allure open",
+    "ejecutar-pruebas": "cypress run --headed --env allure=true --spec \"cypress/e2e/tests/autenticacion.cy.js\"",
+    "limpiar-reporte": "rimraf ./allure-report && rimraf ./allure-results",
+    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas & npm run generar-reporte && npm run abrir-reporte",
+    "cy:parallel" : "npm run limpiar-reporte && cypress-parallel -s ejecutar-pruebas -t 2 -d ./cypress/e2e/tests & npm run generar-reporte"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.13.0"
+    "cypress": "^12.13.0",
+    "cypress-parallel": "^0.14.0"
   },
   "dependencies": {
     "@shelex/cypress-allure-plugin": "^2.40.2",
